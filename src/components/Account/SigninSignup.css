@@ -1,0 +1,263 @@
+:root {
+    --primary-color: #35779b;
+    --secondary-color: #35769a;
+    --black: #000000;
+    --white: #ffffff;
+    --gray: #efefef;
+    --gray-2: #757575;
+    --facebook-color: #4267B2;
+    --google-color: #DB4437;
+    --twitter-color: #1DA1F2;
+    --insta-color: #E1306C;
+  }
+  
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+  
+  .signinsignup-container {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    margin-top: 20px;
+  }
+  
+  .signinsignup-row {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+  }
+  
+  .signinsignup-col {
+    width: 50%;
+  }
+  
+  .align-items-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .signinsignup-form-wrapper {
+    width: 100%;
+    max-width: 28rem;
+  }
+  
+  .signinsignup-form {
+    padding: 1rem;
+    background-color: var(--white);
+    border-radius: 1.5rem;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transform: scale(0);
+    transition: .5s ease-in-out;
+    transition-delay: 1s;
+  }
+  
+  .signinsignup-input-group {
+    position: relative;
+    width: 100%;
+    margin: 1rem 0;
+  }
+  
+  .signinsignup-input-group i {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    font-size: 1.4rem;
+    color: var(--gray-2);
+  }
+  .pointer{
+    cursor: pointer;
+  }
+  
+  .signinsignup-input-group input {
+    width: 100%;
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    background-color: var(--gray);
+    border-radius: .5rem;
+    border: 0.125rem solid var(--white);
+    outline: none;
+  }
+  
+  .signinsignup-input-group input:focus {
+    border: 0.125rem solid var(--primary-color);
+  }
+  
+  .signinsignup-form button {
+    cursor: pointer;
+    width: 100%;
+    padding: .6rem 0;
+    border-radius: .5rem;
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-size: 1.2rem;
+    outline: none;
+  }
+  
+  .signinsignup-form p {
+    margin: 1rem 0;
+    font-size: .7rem;
+  }
+  
+  .flex-col {
+    flex-direction: column;
+  }
+  
+  .signinsignup-container.signinsignup-sign-in .signinsignup-form.signinsignup-sign-in,
+  .signinsignup-container.signinsignup-sign-in .signinsignup-social-list.signinsignup-sign-in,
+  .signinsignup-container.signinsignup-sign-in .signinsignup-social-list.signinsignup-sign-in > div,
+  .signinsignup-container.signinsignup-sign-up .signinsignup-form.signinsignup-sign-up,
+  .signinsignup-container.signinsignup-sign-up .signinsignup-social-list.signinsignup-sign-up,
+  .signinsignup-container.signinsignup-sign-up .signinsignup-social-list.signinsignup-sign-up > div {
+    transform: scale(1);
+  }
+  
+  .signinsignup-content-row {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 6;
+    width: 100%;
+  }
+  
+  .signinsignup-text {
+    margin: 4rem;
+    color: var(--white);
+  }
+  
+  .signinsignup-text h2 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin: 2rem 0;
+    transition: 1s ease-in-out;
+  }
+  
+  .signinsignup-text p {
+    font-weight: 600;
+    transition: 1s ease-in-out;
+    transition-delay: .2s;
+  }
+  
+  .signinsignup-img img {
+    width: 30vw;
+    transition: 1s ease-in-out;
+    transition-delay: .4s;
+  }
+  
+  .signinsignup-text.signinsignup-sign-in h2,
+  .signinsignup-text.signinsignup-sign-in p,
+  .signinsignup-img.signinsignup-sign-in img {
+    transform: translateX(-250%);
+  }
+  
+  .signinsignup-text.signinsignup-sign-up h2,
+  .signinsignup-text.signinsignup-sign-up p,
+  .signinsignup-img.signinsignup-sign-up img {
+    transform: translateX(250%);
+  }
+  
+  .signinsignup-container.signinsignup-sign-in .signinsignup-text.signinsignup-sign-in h2,
+  .signinsignup-container.signinsignup-sign-in .signinsignup-text.signinsignup-sign-in p,
+  .signinsignup-container.signinsignup-sign-in .signinsignup-img.signinsignup-sign-in img,
+  .signinsignup-container.signinsignup-sign-up .signinsignup-text.signinsignup-sign-up h2,
+  .signinsignup-container.signinsignup-sign-up .signinsignup-text.signinsignup-sign-up p,
+  .signinsignup-container.signinsignup-sign-up .signinsignup-img.signinsignup-sign-up img {
+    transform: translateX(0);
+  }
+  
+  .signinsignup-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 300vw;
+    transform: translate(35%, 0);
+    background-image: linear-gradient(-45deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    transition: 1s ease-in-out;
+    z-index: 6;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-bottom-right-radius: max(50vw, 50vh);
+    border-top-left-radius: max(50vw, 50vh);
+  }
+  
+  .signinsignup-container.signinsignup-sign-in::before {
+    transform: translate(0, 0);
+    right: 50%;
+  }
+  
+  .signinsignup-container.signinsignup-sign-up::before {
+    transform: translate(100%, 0);
+    right: 50%;
+  }
+  
+  /* RESPONSIVE */
+  
+  @media only screen and (max-width: 425px) {
+  
+    .signinsignup-container::before,
+    .signinsignup-container.signinsignup-sign-in::before,
+    .signinsignup-container.signinsignup-sign-up::before {
+      height: 100vh;
+      border-bottom-right-radius: 0;
+      border-top-left-radius: 0;
+      z-index: 0;
+      transform: none;
+      right: 0;
+    }
+  
+    .signinsignup-container.signinsignup-sign-in .signinsignup-col.signinsignup-sign-in,
+    .signinsignup-container.signinsignup-sign-up .signinsignup-col.signinsignup-sign-up {
+      transform: translateY(0);
+    }
+  
+    .signinsignup-content-row {
+      align-items: flex-start !important;
+    }
+  
+    .signinsignup-content-row .signinsignup-col {
+      transform: translateY(0);
+      background-color: unset;
+    }
+  
+    .signinsignup-col {
+      width: 100%;
+      position: absolute;
+      padding: 2rem;
+      background-color: var(--white);
+      border-top-left-radius: 2rem;
+      border-top-right-radius: 2rem;
+      transform: translateY(100%);
+      transition: 1s ease-in-out;
+    }
+  
+    .signinsignup-row {
+      align-items: flex-end;
+      justify-content: flex-end;
+    }
+  
+    .signinsignup-form,
+    .signinsignup-social-list {
+      box-shadow: none;
+      margin: 0;
+      padding: 0;
+    }
+  
+    .signinsignup-text {
+      margin: 0;
+    }
+  
+    .signinsignup-text p {
+      display: none;
+    }
+  
+    .signinsignup-text h2 {
+      margin: .5rem;
+      font-size: 2rem;
+    }
+  }
+  

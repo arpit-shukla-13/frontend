@@ -1,0 +1,58 @@
+/* Disable text selection */
+.note {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+}
+
+/* Add styles for the protection message */
+.protection-message {
+  margin-top: 20px;
+  color: red;
+  font-weight: bold;
+  text-align: center;
+}
+
+.note {
+  border-bottom: 1px solid #E5E7EB; /* Add a border between notes */
+}
+
+.note h2 {
+  font-size: 1.25rem; /* Increase the font size of the note subject */
+}
+
+.note h3,
+.note p {
+  font-size: 0.875rem; /* Set the font size for university, college, course, and semester */
+}
+
+.note pre {
+  font-size: 24px; /* Set the font size for notes */
+}
+
+pre {
+  font-size: 30px;
+}
+
+@media (min-width: 640px) {
+  .note h2 {
+    font-size: 1.5rem; /* Increase font size for medium screens */
+  }
+}
+
+@media (min-width: 768px) {
+  .note h2 {
+    font-size: 1.75rem; /* Increase font size for large screens */
+  }
+
+  .note h3,
+  .note p {
+    font-size: 1rem; /* Increase font size for large screens */
+  }
+
+  .note pre {
+    font-size: 0.675rem; /* Increase font size for large screens */
+  }
+}
